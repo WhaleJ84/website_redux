@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block title %}
+Contact | James Whale
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+	<h1>Contact</h1>
+	<form id="eform" action="/contact" method="post">
+        {{ form.hidden_tag() }}
+		<fieldset>
+			<legend>Send me an email</legend>
+            {{ render_field(form.name) }}
+            {{ render_field(form.email) }}
+            {{ render_field(form.message) }}
+			<p>
+			<label for="consent" class="privacy">By clicking submit on this form, you are agreeing to our <a href="{{ url_for('main.privacy_policy') }}" target="_blank">Privacy Policy</a>.</label>
+			</p>
+			<p>
+			<input type="submit" name="submit" id="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<div style="clear:both"></div>
+	<div id="socmed">
+		<h2>Social Media</h2>
+		<a href="https://www.linkedin.com/in/james-whale/" target="_blank">
+			<img id="linkedin" src="{{ url_for('static', filename='media/linkedin.png') }}" alt="LinkedIn"></a>
+		<a href="https://twitter.com/WhaleJ84" target="_blank">
+			<img id="twitter" src="{{ url_for('static', filename='media/twitter.png') }}" alt="Twitter"></a>
+	</div><!--[end]#socmed-->
+{% endblock %}

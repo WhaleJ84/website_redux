@@ -1,0 +1,76 @@
+#eform{
+	text-align: center;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#eform legend{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#eform p{
+	margin: 1%;
+}
+
+#eform label{
+	float: left;
+	margin-left: 1%;
+}
+
+#eform input[type="text"], input[type="email"]{
+	margin-right: 1.4%;
+	width: 200px;
+	float: right;
+	border: 1px solid #D3D7CF;
+	border-radius: 0;
+	color: #ebdbb2;
+}
+
+textarea{
+	margin-right: 1.4%;
+	border: 1px solid #D3D7CF;
+	width: 68.9%;
+	float: right;
+    color: #ebdbb2;
+}
+
+#eform input[type="submit"]{
+	border: solid 1px #D3D7CF;
+	background-color: #2E3436;
+	color: #D3D7CF;
+	width: 75px;
+	height: 25px;
+	text-align: center;
+	font-family: Monospace, monospace;
+}
+
+#eform input[type="submit"]:hover{
+	color: #4E9A06;
+	background-color: #3E3D39;
+}
+
+.privacy{
+	padding-bottom: 5px;
+}
+
+input:invalid{
+	border: solid red 2px;
+}
+
+#socmed{
+	margin: 0 auto;
+	text-align: center;
+	width: max-content;
+}
+
+#socmed a{
+	display: inline-block;
+}
+
+#socmed img{
+	width: 75px;
+}

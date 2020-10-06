@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    404 - Page not found | James Whale
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/images.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>404 - Page not found</h1>
+    <div class="center">
+        <a href="{{ url_for('static', filename='media/job_woss.jpeg') }}" target="_blank">
+            <div class="images not_found">
+                <div id="not_found"></div>
+            </div><!--[end].images-->
+        </a>
+        <p style="text-align: center">
+            We cannot find the page you are looking for.<br/>
+            This is not a mistake, just a happy little accident.
+        </p>
+    </div><!--[end]#center-->
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home | James Whale
+{% endblock %}
+
+{% block content %}
+<h1>Home</h1>
+<article>
+    <h3>Introduction</h3>
+    <p>Hello and welcome to my website, which was originally designed for a university assignment.
+The project had me attempting to bridge the gap between what I can show on my CV and what has been posted on social media.
+All that information has been gathered into one place to show a picture about who I am and what I've achieved on my journeys.</p>
+    <p>I've never been one to enjoy talking about themselves, and this website should help show more about myself than any words I say ever could.
+I aim to update this site with more content as time goes on and I have more to show under my belt.
+This website is designed to reflect my choices and as such the colours, font and simple design is all as inteded - matching my terminal environment I use on a daily basis.</p>
+</article>
+<article>
+    <h3>Newest blog post</h3>
+    <a href='/blog/{{ latest.link }}'><h4>{{ latest.title }}</h4>
+    <div class='images' style='background-image: url(../static/media/{{ latest.image }}_01.jpeg); background-size: cover; background-position-y: 25%; width: 100%; height: 200px;'></div></a>
+    <p>{{ latest.description }}</p>
+    <p>
+        {% if latest.start_date == latest.end_date %}
+            {{ latest.start_date }}
+        {% else %}
+            {{ latest.start_date }} - {{ latest.end_date }}
+        {% endif %}
+    </p>
+</article>
+<article>
+    <h3>What's new</h3>
+    <ul>
+    {% if recent %}
+        {% for blog in recent %}
+            <li><a href='/blog/{{ blog.link }}'>{{ blog.title }}</a> article added. ({{ blog.created }})</li>
+        {% endfor %}
+    {% else %}
+        <li>Nothing new yet</li>
+    {% endif %}
+    </ul>
+
+</article>
+{% endblock %}

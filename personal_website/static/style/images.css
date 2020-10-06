@@ -1,0 +1,33 @@
+#not_found{
+    background-image: url('../media/job_woss.jpeg');
+    background-size: cover;
+	max-width: 912px;
+	max-height: 618px;
+	height: 618px;
+	height: -webkit-fill-available;
+	margin: 0 auto;
+}
+
+.not_found{
+	max-width: 912px;
+	max-height: 618px;
+	margin: 0 auto;
+}
+
+#profpic{
+	background-image: url("../media/profile_picture_01.png");
+	background-size: cover;
+	background-position-x: 25%;
+	background-position-y: 10%;
+	max-width: 600px;
+	max-height: 900px;
+	height: 900px;
+	height: -webkit-fill-available;
+	margin: 0 auto;
+}
+
+.profpic{
+	max-width: 600px;
+	max-height: 900px;
+	margin: 0 auto;
+}

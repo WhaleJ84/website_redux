@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+About | James Whale
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/images.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>About Me</h1>
+	<div class="center">
+		<a href="{{ url_for('static', filename='media/profile_picture_01.png') }}" target="_blank"><div class="images profpic">
+				<div id="profpic"></div>
+        </div></a>
+	</div><!--[end]#center-->
+	<div style="clear:both"></div>
+	<article>
+		<p>I am a BSc (Hons) Cyber Security Management student with a strong passion in Penetration Testing raised by my interest of the digital age security. Until I joined Solent University, all my computing knowledge has been gained entirely though independent means; reading books, watching tutorials and a lot of hands on work grew my fascination with computers and technology to such a point that it is shaped who I am as a person. Since joining the university, I have pushed myself to broaden my experience in a wide array of areas and study hard in order to take on official certifications that are desired in the field. I am determined, reliable and understanding, always happy to help those in need. I am always enthusiastic, punctual and keen on learning new skills. I have a wide range of knowledge in computing and technology and a fascination for how it all works. </p>
+		<h3>Skills</h3>
+		<ul>
+			<li>
+				<h4>Experienced with computers</h4>
+				<p>Used computers since a child and taught myself everything about them.</p>
+			</li>
+			<li>
+				<h4>Proficient in Windows & Linux</h4>
+				<p>Deployed both Operating Systems at home, becoming more familiar than just every-day use.</p>
+			</li>
+			<li>
+				<h4>Highly independent</h4>
+				<p>Does not rely on others and is driven by personal achievements rather than external praise.</p>
+			</li>
+			<li>
+				<h4>Calm under pressure</h4>
+				<p>Taught myself to make the most out of any situation and continue as best I can regardless.</p>
+			</li>
+			<li>
+				<h4>Inquisitive thinker</h4>
+				<p>Always questioning why and how things work as well as looking from different angles to improve things.</p>
+			</li>
+			<li>
+				<h4>Adaptive</h4>
+				<p>Grown used to pushing myself out my comfort zone and learning on the job for new tasks when needed.</p>
+			</li>
+			<li>
+				<h4>Confident leader</h4>
+				<p>Able to take charge and lead others should the need arise, and no better person is already in place.</p>
+			</li>
+			<li>
+				<h4>Self-motivated</h4>
+				<p>I have a vision as to what I want in life and will never stop until I get there.</p>
+			</li>
+		</ul>
+	</article>
+	<article>
+		<h3>Hobbies and activities</h3>
+		<h4>Attending Hackathons and events</h4>
+		<p>My time at university has pushed me to always take on new things. As such, attending hackathons has become a new favourite of mine, as they are often aimed around something, I’m not very skilled in yet. This is pushing me to adapt, use every moment effectively and learn lots of new things with the short time provided. So far, I have attended 2 hackathons and am pleased to say my team has come 2nd and 3rd place across them both.</p>
+		<h4>Computer/Electronics Repairs</h4>
+		<p>Making, breaking and fixing computers since a child. My reputation has given me a few customers since. Friends and family call me if they have any issue, they cannot solve themselves and I will try to explain the fix over the phone or physically go there and explain what I am doing clearly along the way, so they can learn themselves. I have also built 5-10 computers, repaired 3 laptops, 1 PlayStation 3 and am slowly building my own homelab.</p>
+		<h4>University Course Representative</h4>
+		<p>I am a spokesperson for the students on my course, of whom they can come to about any of their issues and voice their opinions to me about the lessons. I attend meetings with the entire computing department and can help shape the future of the course through my input.</p>
+		<h4>Running</h4>
+		<p>Running for the past 5 years, starting with the ‘encouragement’ of an ex-army friend who got me into constantly pushing myself to see what I can achieve. Have participated in organised runs, run at least 5km most weekends and my longest distance without stopping is 20km, of which I have achieved more than once.</p>
+		<h4>Playing Guitar/Singing</h4>
+		<p>Played guitar on/off for ~15 years and my courses in college were influenced by that. I chose to learn how to sing while playing guitar as I had to perform a gig as a part of my course. It is a personal private way to unwind and something I keep coming back to when spare time starts coming back into my life.</p>
+		<h4>Networking & Industry Events</h4>
+		<p>University life has opened many more doors for me and attending networking and industry events has been one of those doors. The variety of topics and chances they bring is something I enjoy going to, allowing me to try and meet others in the industry and start making a network of connections as well as learning a wealth of new knowledge.</p>
+		<h4>Reading Books</h4>
+		<p>I have amassed hundreds of books over the years, most of them computing related that I view as tools; something I can pick up and use when the need arises to allow me to do a job.  When I am not learning from a book, I am reading science fiction books and autobiographies, of whom my favourite author is Harlan Ellison.</p>
+	</article>
+{% endblock %}

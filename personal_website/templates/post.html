@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ blog.title }} | James Whale
+{% endblock %}
+
+{% block content %}
+    <h1>{{ blog.title }}</h1>
+    <a href='../static/media/{{ blog.image }}_01.jpeg' alt='' target='_blank'></a>
+    <article class='full'>
+        <div id='text'>
+            {{ blog.content|safe }}
+        </div><!--[end]#text-->
+        <p>
+            {% if blog.start_date == blog.end_date %}
+                {{ blog.start_date }}
+            {% else %}
+                {{ blog.start_date }} - {{ blog.end_date }}
+            {% endif %}
+        </p>
+    </article>
+{% endblock %}
