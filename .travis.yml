@@ -6,7 +6,7 @@ install:
 addons:
   postgresql: "13"
 before_script:
-  - psql -U postgres -c "CREATE DATABASE jameswhale;"
+  - psql -U postgres -c "create database jameswhale;"
   - psql -U postgres -c "CREATE USER james WITH PASSWORD 'whale';"
   - psql -U postgres -c "GRANT ALL PRVILEGES ON DATABASE jameswhale TO james;"
   - psql -U james -d jameswhale -f ./database_dumps/jameswhale.sql
