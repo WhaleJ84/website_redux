@@ -1,5 +1,11 @@
 language: python
 python:
   - "3.8"
+addons:
+  postgresql: "13"
+before_script:
+  - psql -U postgres -c "CREATE DATABASE jameswhale;"
+  - psql -U postgres -c "CREATE USER james WITH PASSWORD 'whale';"
+  - psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE jameswhale TO james;"
 install:
   - pip install -r requirements.txt

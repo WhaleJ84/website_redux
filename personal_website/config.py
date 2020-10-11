@@ -5,18 +5,18 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost/james-whale'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
     DEBUG = True
 
 
 class TestingConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost/james-whale-test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
     TESTING = True
     WTF_CSRF_ENABLED = False
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost/james-whale'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
     DEBUG = False
 
 
