@@ -6,9 +6,9 @@ install:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database jameswhale;' -U postgres
+  - psql -U postgres -c "create database jameswhale;"
   - psql -U postgres -c "CREATE USER james WITH PASSWORD 'whale';"
-  - psql -U postgres -c "GRANT ALL PRVILEGES ON DATABASE jameswhale TO james;"
+  - psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE jameswhale TO james;"
   - psql -U james -d jameswhale -f ./database_dumps/jameswhale.sql
 script:
   - python -m unittest
