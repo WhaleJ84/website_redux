@@ -42,4 +42,4 @@ class PersonalWebsiteTestCase(TestCase):
 
     def test_blog_post_response_code(self):
         response = self.client.get(url_for('blog.blog_post', link='badlink'), follow_redirects=True)
-        assert response.status_code == 404
+        assert response.status_code == 200
