@@ -1,6 +1,4 @@
-FROM python:3.8
-COPY . .
-RUN apt-get -y update \
-    && pip3 install -r requirements.txt
-EXPOSE 5000
-ENTRYPOINT ["python3", "./manage.py"]
+FROM tiangolo/meinheld-gunicorn-flask:python3.8
+COPY . /app
+RUN pip install --upgrade pip \
+&& pip install -r requirements.txt
