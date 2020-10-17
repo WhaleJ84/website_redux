@@ -6,44 +6,44 @@
 }
 
 #opendayapril2019{
-	background-image: url("/personal_website/static/media/open_day_april_19_01.jpeg");
+	background-image: url("../media/open_day_april_19_01.jpeg");
 	max-width: 1599px;
 	max-height: 1200px;
 }
 
 #firehack2019{
-	background-image: url("/personal_website/static/media/fire_hack_19_01.jpeg");
+	background-image: url("../media/fire_hack_19_01.jpeg");
 	max-width: 1599px;
 	max-height: 799px;
 }
 
 #opendaymarch2019{
-	background-image: url("/personal_website/static/media/open_day_march_19_01.jpeg");
+	background-image: url("../media/open_day_march_19_01.jpeg");
 	max-width: 2048px;
 	max-height: 1536px;
 }
 
 #hackthesouth2019{
-	background-image: url("/personal_website/static/media/hack_south_19_01.jpeg");
+	background-image: url("../media/hack_south_19_01.jpeg");
 	max-width: 1600px;
 	max-height: 1607px;
 }
 
 #pastnet2019{
-	background-image: url("/personal_website/static/media/past_net_19_01.jpeg");
+	background-image: url("../media/past_net_19_01.jpeg");
 	background-position-y: 0;
 	max-width: 1351px;
 	max-height: 672px;
 }
 
 #heritagescience2019{
-	background-image: url("/personal_website/static/media/heritage_science_19_01.jpeg");
+	background-image: url("../media/heritage_science_19_01.jpeg");
 	max-width: 1599px;
 	max-height: 1200px;
 }
 
 #hackcoworking2019{
-	background-image: url("/personal_website/static/media/hack_coworking_19_01.jpeg");
+	background-image: url("../media/hack_coworking_19_01.jpeg");
 	max-width: 1599px;
 	max-height: 1200px;
 }
