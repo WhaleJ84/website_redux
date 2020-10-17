@@ -15,4 +15,4 @@ def blog_homepage():
 @blog.route('/<link>')
 def blog_post(link):
     post = Blogs.query.filter_by(link=link).first_or_404()
-    return render_template('post.html', blog=post, last_updated=post.last_updated)
+    return render_template('post.html', blog=post, last_updated=post.last_updated, onload='slideShow()')
