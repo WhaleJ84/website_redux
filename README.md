@@ -14,13 +14,12 @@ This section outlines how to backup and restore the database between deployments
 ### Backup
 
 ```
-docker exec personal_website_database_1 /usr/bin/pg_dump -U james -d jameswhale > jameswhale.sql
-docker cp personal_website_database_1:/jameswhale.sql ./jameswhale-$(date +"%C%m%d%H%M%S").sql
+docker exec personal_website_database_1 /usr/bin/pg_dump -U james -d jameswhale > database_dumps/jameswhale.sql
 ```
 
 ### Restore
 
 ```
-docker cp ./jameswhale-$(date +"%C%m%d%H%M%S").sql personal_website_database_1:/jameswhale.sql
+docker cp database_dumps/jameswhale.sql personal_website_database_1:/jameswhale.sql
 docker exec personal_website_database_1 /usr/bin/psql -U james -d jameswhale -f jameswhale.sql
 ```

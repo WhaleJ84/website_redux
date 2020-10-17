@@ -28,3 +28,4 @@ class Blogs(db.Model):
     content = db.Column(db.Text)
     # `hidden` tinyint(1) NOT NULL DEFAULT
     hidden = db.Column(db.Boolean, nullable=False)
+    last_updated = db.Column(db.Date)
