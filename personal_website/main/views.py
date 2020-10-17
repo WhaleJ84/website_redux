@@ -28,9 +28,9 @@ def contact():
         email = form.email.data
         message = form.message.data
         flash('Name: {}, Email: {}, Message: {} | SENT'.format(name, email, message))
-        return redirect(url_for('index'))
+        return redirect(url_for('main.index'))
     flash('WARNING: This contact form does not work. Any information input will be lost.')
-    return render_template('contact.html', form=form, last_updated='2019-07-04')
+    return render_template('contact.html', form=form, last_updated='2019-07-04', onload='main()')
 
 
 @main.route('/privacy_policy')
