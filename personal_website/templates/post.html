@@ -4,9 +4,15 @@
 {{ blog.title }} | James Whale
 {% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/blog.css') }}">
+{% endblock %}
+
 {% block content %}
     <h1>{{ blog.title }}</h1>
-    <a href='../static/media/{{ blog.image }}_01.jpeg' alt='' target='_blank'></a>
+    <a href='../../static/media/{{ blog.image }}_01.jpeg' alt='' target='_blank'>
+        <div id="{{ blog.link }}" class="blog images" style="width: 97.5%; margin: 0 auto;"></div>
+    </a>
     <article class='full'>
         <div id='text'>
             {{ blog.content|safe }}
@@ -19,4 +25,23 @@
             {% endif %}
         </p>
     </article>
+    <article>
+		<div class="slideshow">
+			<div class="slide fade images">
+				<a href="../../static/media/{{ blog.image }}_01.jpeg" target="_blank"><img class="customImage" src="../../static/media/{{ blog.image }}_01.jpeg" alt=""></a>
+			</div><!--[end]#slide-->
+			<div class="slide fade images">
+				<a href="../../static/media/{{ blog.image }}_02.jpeg" target="_blank"><img class="customImage" src="../../static/media/{{ blog.image }}_02.jpeg" alt=""></a>
+			</div><!--[end]#slide-->
+			<div class="slide fade images">
+				<a href="../../static/media/{{ blog.image }}_03.jpeg" target="_blank"><img class="customImage" src="../../static/media/{{ blog.image }}_03.jpeg" alt=""></a>
+			</div><!--[end]#slide-->
+			<div class="slide fade images">
+				<a href="../../static/media/{{ blog.image }}_04.jpeg" target="_blank"><img class="customImage" src="../../static/media/{{ blog.image }}_04.jpeg" alt=""></a>
+			</div><!--[end]#slide-->
+			<a class="back" onclick="forth(-1)">&#10094;</a>
+			<a class="forth" onclick="forth(1)">&#10095;</a>
+		</div><!--[end]#slideshow-->
+		<div style="clear:both"></div>
+	</article>
 {% endblock %}
