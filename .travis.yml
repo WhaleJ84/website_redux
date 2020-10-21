@@ -1,6 +1,11 @@
 language: python
 python:
   - "3.8"
+branches:
+  only:
+    - main
+    - release
+    - development
 install:
   - pip install -r requirements.txt
 services:
@@ -9,6 +14,6 @@ before_script:
   - psql -U postgres -c "create database jameswhale;"
   - psql -U postgres -c "CREATE USER james WITH PASSWORD 'whale';"
   - psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE jameswhale TO james;"
-  - psql -U james -d jameswhale -f ./database_dumps/jameswhale.sql
+  - psql -U james -d jameswhale -f ./build/database/jameswhale.sql
 script:
   - python -m unittest
