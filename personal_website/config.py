@@ -5,7 +5,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@database/jameswhale'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
     SQLALCHEMY_RECORD_QUERIES = True
     DEBUG = True
 
