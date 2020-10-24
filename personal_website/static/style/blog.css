@@ -1,8 +1,15 @@
-#opendayapril2019, #firehack2019, #opendaymarch2019, #hackthesouth2019, #pastnet2019, #heritagescience2019,#hackcoworking2019{
+#opendayapril2019, #firehack2019, #opendaymarch2019, #hackthesouth2019, #pastnet2019, #heritagescience2019,
+#hackcoworking2019, #collegemusic2013{
 	background-size: cover;
 	background-position-y: 25%;
 	width: 100%;
 	height: 200px;
+}
+
+#collegemusic2013{
+	background-image: url("../media/college_music_13_01.jpeg");
+	max-width: 1024px;
+	max-height: 576px;
 }
 
 #opendayapril2019{
