@@ -11,9 +11,9 @@ About | James Whale
 {% block content %}
     <h1>About Me</h1>
 	<div class="center">
-		<a href="{{ url_for('static', filename='media/profile_picture_01.png') }}" target="_blank"><div class="images profpic">
-				<div id="profpic"></div>
-        </div></a>
+		<a href="{{ url_for('static', filename='media/profile_picture_01.png') }}" target="_blank">
+				<img src="{{ url_for('static', filename='media/profile_picture_01.png') }}" alt="A professional picture of James" class="images"/>
+        </a>
 	</div><!--[end]#center-->
 	<div style="clear:both"></div>
 	<article>
