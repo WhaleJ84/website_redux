@@ -16,7 +16,7 @@ This section outlines how to backup and restore the database between deployments
 ### Backup
 
 ```
-docker exec personal_website_database_1 /usr/bin/pg_dump -U james -d jameswhale > database_dumps/jameswhale.sql
+docker exec database /usr/bin/pg_dump -U james -d jameswhale > build/database/jameswhale.sql
 ```
 
 ### Restore
