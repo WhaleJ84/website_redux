@@ -14,7 +14,7 @@ Blog | James Whale
     <p class='center'>We're all busy people, and as such each blog post here is provided with a TL;DR (Too Long; Didn't Read) beneath the image to save you your precious time and let you view what I've done at a glance.
 You're welcome.</p>
     {% for blog in blogs %}
-    <article>
+    <article class="blog">
         <a href='/blog/{{ blog.link }}'>
             <h3>{{ blog.title }}</h3>
             <div class='images' style='background-image: url(../static/media/{{ blog.image }}_01.jpeg); background-size: cover; background-position-y: 25%; width: 100%; height: 200px;'></div>
