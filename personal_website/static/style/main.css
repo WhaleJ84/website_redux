@@ -120,6 +120,7 @@ article .text{
 }
 
 .images{
+	margin: 0 auto;
 	border: 1px solid var(--light_yellow);
 }
 
@@ -212,11 +213,6 @@ footer{
 	white-space: nowrap;
 	overflow: hidden;
 
-}
-
-.flashes li{
-	margin: 0 auto;
-	text-align: center;
 }
 
 @media(max-width: 480px){
