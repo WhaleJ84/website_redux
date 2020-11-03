@@ -12,9 +12,7 @@
     <h1>404 - Page not found</h1>
     <div class="center">
         <a href="{{ url_for('static', filename='media/job_woss.jpeg') }}" target="_blank">
-            <div class="images not_found">
-                <div id="not_found"></div>
-            </div><!--[end].images-->
+            <img src="{{ url_for('static', filename='media/job_woss.jpeg') }}" alt="An image of James' face put over Bob Ross's" class="images"/>
         </a>
         <p style="text-align: center">
             We cannot find the page you are looking for.<br/>

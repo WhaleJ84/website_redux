@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='media/favicon.ico') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}">
     <script src="{{ url_for('static', filename='script/main.js') }}"></script>
     {% block head %}
@@ -11,35 +12,28 @@
 </head>
 <body onload=" {{ onload }}">
     <div id="content">
-        <header>
-            <nav>
-                <a href="{{ url_for('main.contact') }}">Contact</a>
-                <a href="{{ url_for('main.about') }}">About</a>
-                <a href="{{ url_for('blog.blog_homepage') }}">Blog</a>
-                <a href="{{ url_for('main.index') }}">Home</a>
-            </nav>
-            <h1 id="title">James Whale</h1>
-        </header>
-        <article class="flashes">
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul>
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
-        </article>
-        <div style="clear:both"/>
+        <div id="header">
+            <header>
+                <nav>
+                    <a href="{{ url_for('main.contact') }}">Contact</a>
+                    <a href="{{ url_for('main.about') }}">About</a>
+                    <a href="{{ url_for('blog.blog_homepage') }}">Blog</a>
+                    <a href="{{ url_for('main.index') }}">Home</a>
+                </nav>
+                <h1 id="title">James Whale</h1>
+            </header>
+        </div><!--[end]#header-->
+        <div style="clear:both"></div>
         <div id="main">
             {% block content %}
             {% endblock %}
         </div><!--[end]#main-->
-        <div style="clear:both"/>
-        <footer>
-            <p>James Whale | Last updated: {{ last_updated }}</p>
-        </footer>
+        <div style="clear:both"></div>
+        <div id="footer">
+            <footer>
+                <p>Page last updated: {{ last_updated }}</p>
+            </footer>
+        </div><!--[end]#footer-->
     </div><!--[end]#content-->
 </body>
 </html>
