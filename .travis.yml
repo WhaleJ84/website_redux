@@ -19,4 +19,4 @@ script:
   - python -m unittest
   - coverage run -m unittest discover
 after_success:
-  - bash <(curl -s https://codecov.io/bash -t '16acba9a-d93c-481b-a28a-7588f7c2b044')
+  - bash <(curl -t '16acba9a-d93c-481b-a28a-7588f7c2b044' -s https://codecov.io/bash)
