@@ -5,7 +5,7 @@ cd /var/www/ || return
 
 # clone down the repository and enter it
 git clone https://github.com/WhaleJ84/website_redux.git
-cd website_redux-main || return
+cd website_redux || return
 
 # create python venv and activate it
 python3 -m venv personal_website-env
