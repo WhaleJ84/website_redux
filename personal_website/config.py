@@ -1,5 +1,8 @@
+import os
+
+
 class Config:
-    SECRET_KEY = '\xa5\xff\xe67\xa5\x85\x9cd\xe6=\xa1]\xb6C \xcd\x10\xfdl\xa9\xe2^Dz'
+    SECRET_KEY = os.urandom(16)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = False
 
