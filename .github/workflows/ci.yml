@@ -9,7 +9,7 @@ name: CI
 jobs:
   test:
     name: Linting
-    runs-on: ubuntu2004
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         distro:
