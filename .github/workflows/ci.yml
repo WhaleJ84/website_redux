@@ -29,7 +29,7 @@ jobs:
         run: pip3 install pylint
 
       - name: Run pylint
-        run: pylint personal_website
+        run: pylint manage.py personal_website/
         env:
           PY_COLORS: '1'
 ...
