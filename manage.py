@@ -1,4 +1,7 @@
 #!/usr/bin/env python3.8
+"""
+Used to start the Flask application and uses the `personal_website/__init__.py` file to build.
+"""
 
 import os
 
