@@ -1,0 +1,42 @@
+---
+name: CI
+'on':
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Linting
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro:
+          - ubuntu2004
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip3 install pylint yamllint
+
+      - name: Install pip depencencies
+        run: pip3 install -r requirements.txt
+
+      - name: Run yamllint
+        run: yamllint .
+        env:
+          PY_COLORS: '1'
+
+      - name: Run pylint
+        run: pylint manage.py personal_website/
+        env:
+          PY_COLORS: '1'
+...

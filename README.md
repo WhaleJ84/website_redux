@@ -1,5 +1,6 @@
 # Personal Website
 
+![CI](https://github.com/WhaleJ84/website_redux/workflows/CI/badge.svg)
 [![Build Status](https://travis-ci.com/WhaleJ84/website_redux.svg?token=bQrzTEEcDB4TnMh7bfsH&branch=main)](https://travis-ci.com/WhaleJ84/website_redux)
 [![codecov](https://codecov.io/gh/WhaleJ84/website_redux/branch/main/graph/badge.svg?token=X7ISO9NP60)](https://codecov.io/gh/WhaleJ84/website_redux)
 

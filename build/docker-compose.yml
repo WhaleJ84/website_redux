@@ -1,3 +1,4 @@
+---
 version: '3.3'
 
 services:
@@ -10,17 +11,18 @@ services:
       MODULE_NAME: manage
       PERSONAL_WEBSITE_ENV: prod
     ports:
-    - 80:80
+      - 80:80
     depends_on:
-    - database
+      - database
 
   database:
     build: database
     container_name: database
     restart: always
     ports:
-    - 5432:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: james
       POSTGRES_PASSWORD: whale
       POSTGRES_DB: jameswhale
+...
