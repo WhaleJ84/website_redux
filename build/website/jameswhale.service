@@ -5,9 +5,9 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/var/www/personal_website-main
-Environment="PATH=/var/www/personal_website-main/personal_website-env/bin"
-ExecStart=/var/www/personal_website-main/personal_website-env/bin/uwsgi --ini build/website/james-whale.ini
+WorkingDirectory=/var/www/website_redux
+Environment="PATH=/var/www/website_redux/personal_website-env/bin"
+ExecStart=/var/www/website_redux/personal_website-env/bin/uwsgi --ini build/website/james-whale.ini
 
 [Install]
 WantedBy=multi-user.target
