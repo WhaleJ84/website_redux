@@ -30,4 +30,6 @@ jobs:
 
       - name: Run pylint
         run: pylint personal_website
+        env:
+          PY_COLORS: '1'
 ...
