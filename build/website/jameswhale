@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name james-whale.com www.james-whale.com;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/www/website_redux/jameswhale.sock;
+    }
+}
