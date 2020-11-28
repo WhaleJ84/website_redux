@@ -4,7 +4,7 @@
 [ ! -e '/usr/bin/certbot' ] && ln -s /snap/bin/certbot /usr/bin/certbot
 
 # get ssl certificates
-certbot --nginx --noninteractive -d james-whale.com -d www.james-whale.com
+certbot --nginx --noninteractive --redirect -d james-whale.com -d www.james-whale.com
 
 # create monthly renew job if it doesn't exist
 [ ! -f '/etc/cron.d/jameswhale' ] && cat > /etc/cron.d/jameswhale << EOF
