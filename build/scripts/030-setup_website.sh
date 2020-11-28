@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/bin/sh
 
 # copy systemd service file
 cp ../website/jameswhale.service /etc/systemd/system/jameswhale.service
