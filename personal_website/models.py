@@ -1,8 +1,16 @@
+"""
+Contains the table structure used for the blogs table.
+Pretty sure this never even gets used and could be removed.
+"""
 
 from personal_website import db
 
 
-class Blogs(db.Model):
+class Blogs(db.Model):  # pylint: disable=too-few-public-methods
+    # pylint: disable=no-member
+    """
+    Used to create a new table with the following columns.
+    """
     __tablename__ = 'blogs'
     __table_args__ = {'extend_existing': True}
 
