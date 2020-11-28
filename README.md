@@ -12,6 +12,19 @@ I eventually plan to move it back to having everything containerised but I prior
 Along with the rewrite, I am using this opportunity to learn more about CI/CD and delve more into DevOps.
 I currently have a CI workflow going with [Travis CI](https://travis-ci.com/) and will (eventually) get around to implementing CD.
 
+## Initial Setup
+
+Provided a server is available and a DNS entry for the domain correctly set up, following the commands below should set up the web server from scratch.
+
+```
+apt update && apt install -y git
+cd /var/www
+git clone https://github.com/WhaleJ84/website_redux.git
+cd  website_redux
+./setup.sh
+```
+
+
 ## Older instructions for website container
 
 ```
