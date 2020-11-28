@@ -24,6 +24,19 @@ cd  website_redux
 ./setup.sh
 ```
 
+## Managing the app
+
+As the installation script sets up a systemd service, both `nginx` and `uwsgi` can be handled as such:
+
+```
+# nginx
+systemctl {stop,start,restart} nginx
+
+# uwsgi
+systemctl {stop,start} jameswhale
+```
+
+If any changes have been made to the Flask application itself, uWSGI will have to be stopped and started again to reflect the changes.
 
 ## Older instructions for website container
 
@@ -59,5 +72,4 @@ I am noting them here so I can migrate the instances to more secure methods.
 - .travis.yml > before_script: postgres creds (purposely bad)
 - codecov.yml > token (will be obsolete when repo goes public)
 - build/docker-compose.yml > database: environment: POSTGRES_PASSWORD (purposely bad)
-- personal_website/config.py > SECRET_KEY (easily regenerated)
 - personal_website/config.py > SQLALCHEMY_DATABASE_URI's (purposely bad)

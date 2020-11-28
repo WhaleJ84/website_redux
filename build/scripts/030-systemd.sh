@@ -10,8 +10,8 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/var/www/website_redux
-Environment="PATH=/var/www/website_redux/personal_website-env/bin"
-ExecStart=/var/www/website_redux/personal_website-env/bin/uwsgi --ini build/website/jameswhale.ini
+Environment="PATH=/var/www/website_redux/venv/bin"
+ExecStart=/var/www/website_redux/venv/bin/uwsgi --ini build/website/jameswhale.ini
 
 [Install]
 WantedBy=multi-user.target
