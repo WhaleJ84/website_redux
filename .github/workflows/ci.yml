@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: pip3 install pylint
 
+      - name: Install pip depencencies
+        run: pip3 install -r requirements.txt
+
       - name: Run pylint
         run: pylint manage.py personal_website/
         env:
