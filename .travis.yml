@@ -7,6 +7,7 @@ branches:
     - main
 install:
   - pip install -r requirements.txt
+  - pip install -r dev-requirements.txt
 services:
   - postgresql
 before_script:
