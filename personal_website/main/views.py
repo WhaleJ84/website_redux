@@ -3,7 +3,7 @@ Contains all the routes (views) needed for the main blueprint.
 Things such as functions and forms should be in separate files.
 """
 
-from flask import render_template, redirect, url_for, flash
+from flask import render_template, flash
 
 from personal_website.models import Blogs
 from . import main
@@ -40,12 +40,12 @@ def contact():
     :return:
     """
     form = ContactForm()
-    if form.validate_on_submit():
-        name = form.name.data
-        email = form.email.data
-        message = form.message.data
-        flash('Name: {}, Email: {}, Message: {} | SENT'.format(name, email, message))
-        return redirect(url_for('main.index'))
+    # if form.validate_on_submit():
+    #     name = form.name.data
+    #     email = form.email.data
+    #     message = form.message.data
+    #     flash('Name: {}, Email: {}, Message: {} | SENT'.format(name, email, message))
+    #     return redirect(url_for('main.index'))
     flash('WARNING: This contact form does not work. Any information input will be lost.')
     return render_template('contact.html', form=form, last_updated='2019-07-04', onload='main()')
 
