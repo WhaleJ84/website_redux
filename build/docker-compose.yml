@@ -2,14 +2,45 @@
 version: '3.3'
 
 services:
-  website:
+  dev_website:
     build:
-      context: ../
-    container_name: website
+      context: ./../
+      dockerfile: build/website/Dockerfile
+    container_name: dev_website
+    restart: always
+    environment:
+      MODULE_NAME: manage
+      DEV_DB_URI: ${DEV_DB_URI}
+    ports:
+      - 8080:80
+    depends_on:
+      - database
+
+  test_website:
+    build:
+      context: ./../
+      dockerfile: build/website/Dockerfile
+    container_name: test_website
+    restart: always
+    environment:
+      MODULE_NAME: manage
+      PERSONAL_WEBSITE_ENV: test
+      TEST_DB_URI: ${TEST_DB_URI}
+    ports:
+      - 8081:80
+    depends_on:
+      - database
+
+  prod_website:
+    build:
+      context: ./../
+      dockerfile: build/website/Dockerfile
+    container_name: prod_website
     restart: always
     environment:
       MODULE_NAME: manage
       PERSONAL_WEBSITE_ENV: prod
+      PROD_DB_URI: ${PROD_DB_URI}
     ports:
       - 80:80
     depends_on:
@@ -22,7 +53,7 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: james
-      POSTGRES_PASSWORD: whale
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: jameswhale
 ...

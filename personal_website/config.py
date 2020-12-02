@@ -16,8 +16,9 @@ class Config:  # pylint: disable=too-few-public-methods
 class DevelopmentConfig(Config):  # pylint: disable=too-few-public-methods
     """
     Variables that add to/overwrite values from the default class for the development environment.
+    Development will typically be run locally.
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
+    SQLALCHEMY_DATABASE_URI = f"{os.getenv('DEV_DB_URI')}"
     SQLALCHEMY_RECORD_QUERIES = True
     DEBUG = True
 
@@ -25,8 +26,9 @@ class DevelopmentConfig(Config):  # pylint: disable=too-few-public-methods
 class TestingConfig(Config):  # pylint: disable=too-few-public-methods
     """
     Variables that add to/overwrite values from the default class for the testing environment.
+    Testing will typically be run in a container.
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@localhost/jameswhale'
+    SQLALCHEMY_DATABASE_URI = f"{os.getenv('TEST_DB_URI')}"
     TESTING = True
     WTF_CSRF_ENABLED = False
 
@@ -34,8 +36,9 @@ class TestingConfig(Config):  # pylint: disable=too-few-public-methods
 class ProductionConfig(Config):  # pylint: disable=too-few-public-methods
     """
     Variables that add to/overwrite values from the default class for the production environment.
+    Production will typically be run bare on a server.
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql://james:whale@database/jameswhale'
+    SQLALCHEMY_DATABASE_URI = f"{os.getenv('PROD_DB_URI')}"
     DEBUG = False
 
 
