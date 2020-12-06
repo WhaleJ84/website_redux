@@ -10,6 +10,8 @@ install:
   - pip install -r dev-requirements.txt
 services:
   - postgresql
+env:
+  - TEST_DB_URI=postgresql://james:whale@localhost/jameswhale
 before_script:
   - psql -U postgres -c "create database jameswhale;"
   - psql -U postgres -c "CREATE USER james WITH PASSWORD 'whale';"
