@@ -63,14 +63,14 @@ docker cp database_dumps/jameswhale.sql personal_website_database_1:/jameswhale.
 docker exec personal_website_database_1 /usr/bin/psql -U james -d jameswhale -f jameswhale.sql
 ```
 
-# NOTES
-
 ## Sensitive docs to be removed
 
 The 'sensitive' docs mentioned here have purposely had bad creds chosen for them as they will be changed and serve no immediate risk.
 I am noting them here so I can migrate the instances to more secure methods.
 
-- .travis.yml > before_script: postgres creds (purposely bad)
-- codecov.yml > token (will be obsolete when repo goes public)
-- build/docker-compose.yml > database: environment: POSTGRES_PASSWORD (purposely bad)
-- personal_website/config.py > SQLALCHEMY_DATABASE_URI's (purposely bad)
+### .travis.yml postgres credentials (purposely bad)
+
+Seemingly the only way to encrypt values for travis is to use a CLI program.
+Screw `travis login`.
+Trying to log into said program seems impossible - therefore this credential remains in cleartext.
+Travis builds a brand new postgres instance and imports the table anyway.

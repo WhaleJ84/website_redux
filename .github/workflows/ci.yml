@@ -24,11 +24,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip3 install pylint yamllint
-
       - name: Install pip depencencies
         run: pip3 install -r requirements.txt
+
+      - name: Install pip dev dependencies
+        run: pip3 install -r dev-requirements.txt
 
       - name: Run yamllint
         run: yamllint .
